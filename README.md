@@ -10,9 +10,6 @@ The below pipeline configuration demonstrates simple usage:
       image: codefresh/release-to-npm
       commands:
       - NPM_TOKEN=${{NPM_TOKEN}} npm run ci-publish 
-      when:   
-        branch: 
-          only: [ master ]
 
 
 Parameter Reference:
