@@ -4,7 +4,7 @@
   "description": "Let the CI do the `npm publish` step after the build passes",
   "main": "index.js",
   "bin": {
-    "release-to-npm": "bin/ci-publish.js"
+    "release-to-npm": "bin/release-to-npm.js"
   },
   "files": [
     "bin",
