@@ -2,7 +2,7 @@
 
 ## How to use
 
-- Add as a dependency to your project `npm install --save-dev ci-publish`
+- Add as a dependency to your project `npm install --save-dev release-to-npm`
 
 - Login into your project's NPM registry
 
@@ -27,7 +27,7 @@ Create a script command to run the publish, in your `package.json`
 ```json
 {
     "scripts": {
-        "ci-publish": "ci-publish"
+        "release-to-npm": "release-to-npm"
     }
 }
 ```
