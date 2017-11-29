@@ -1,4 +1,31 @@
-# release-to-npm
+# Codefresh release-to-npm Plugin
+
+The release-to-npm can be used to publish images to npm. 
+
+## Usage
+
+Set required and optional environment variable and add the following step to your Codefresh pipeline:
+
+```yaml
+---
+version: '1.0'
+
+steps:
+
+  ...
+
+     deploy_to_npm:  
+      title: Publishing To Npm 
+      image: codefresh/release-to-npm
+      commands:
+      - NPM_TOKEN=${{NPM_TOKEN}} npm run release-to-npm 
+  ...
+
+```
+
+## Environment Variables
+
+- **required** `NPM_TOKEN` - token of npm account
 
 ## How to use
 
@@ -17,10 +44,7 @@ see how to extracting the NPM_TOKEN https://docs.npmjs.com/private-modules/ci-se
 
 - Set the token as environment variable
 
-Go to your project settings and add a new variable `NPM_TOKEN` with the value you
-have just copied
-
-- Add script command (optional)
+- Add script command
 
 Create a script command to run the release-to-npm, in your `package.json`
 
@@ -31,4 +55,7 @@ Create a script command to run the release-to-npm, in your `package.json`
     }
 }
 ```
+
+
+
 
