@@ -22,7 +22,7 @@ have just copied
 
 - Add script command (optional)
 
-Create a script command to run the publish, in your `package.json`
+Create a script command to run the release-to-npm, in your `package.json`
 
 ```json
 {
