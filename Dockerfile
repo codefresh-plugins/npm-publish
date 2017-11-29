@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm link
 
-CMD ['npm' ,'run', 'ci-publish']
+CMD ['npm' ,'run', 'release-to-npm']
