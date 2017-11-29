@@ -1,6 +1,6 @@
 {
   "name": "release-to-npm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Let the CI do the `npm publish` step after the build passes",
   "main": "index.js",
   "bin": {
