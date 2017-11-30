@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 const npm = require('npm-utils');
-let dir = process.env.DIR;
-
+const _   = require('lodash');
+let dir   = process.argv[2];
 
 try {
-  if (typeof (dir) === "undefined") {
-      dir = ".";
+  if(_.isUndefined(dir)){
+      dir = '.';
   }
   process.chdir(dir);
   console.log('Current directory: ' + process.cwd());
@@ -16,11 +16,11 @@ try {
 }
 catch (err) {
   console.log('invalid directory');
-  process.exit(-1)
+  process.exit(-1);
 }
 
 function onError (err) {
   console.error(err);
-  process.exit(-1)
+  process.exit(-1);
 }
 
