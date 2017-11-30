@@ -1,10 +1,10 @@
 {
-  "name": "release-to-npm",
-  "version": "1.0.1",
+  "name": "publish-for-npm",
+  "version": "1.0.3",
   "description": "Let the CI do the `npm publish` step after the build passes",
   "main": "index.js",
   "bin": {
-    "release-to-npm": "bin/release-to-npm.js"
+    "npm-publish": "npm-publish.js"
   },
   "files": [
     "bin",
@@ -13,14 +13,15 @@
   "scripts": {
     "test": "npm run lint",
     "commit": "simple-commit-message",
-    "lint": "standard bin/*.js src/*.js",
-    "release-to-npm": "node bin/release-to-npm.js",
+    "npm-publish": "node npm-publish.js",
     "ban": "node --harmony node_modules/.bin/ban",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "run": "./run.sh",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts || true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codefresh-io/release-to-npm.git"
+    "url": "git+https://github.com/codefresh-io/npm-publish.git"
   },
   "keywords": [
     "release",
@@ -31,7 +32,7 @@
     "automatic"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/codefresh-io/release-to-npm#readme",
+  "homepage": "https://github.com/codefresh-io/npm-publish#readme",
   "devDependencies": {
     "ban-sensitive-files": "1.8.3",
     "pre-git": "3.10.0",

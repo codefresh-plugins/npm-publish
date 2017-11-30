@@ -1,9 +1,12 @@
-FROM node:8.8.0
+FROM node:8.8.0-alpine
 
-WORKDIR /cli
+WORKDIR .
 
 COPY . .
 
-RUN npm link
 
-CMD ['npm' ,'run', 'release-to-npm']
+RUN ["npm", "install"]
+
+ENTRYPOINT ["node","npm-publish.js"]
+
+
