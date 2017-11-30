@@ -1,4 +1,4 @@
-# Codefresh release-to-npm Plugin
+# Codefresh npm-publish Plugin
 
 The release-to-npm can be used to publish images to npm. 
 
