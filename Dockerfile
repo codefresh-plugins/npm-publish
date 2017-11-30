@@ -4,7 +4,6 @@ WORKDIR .
 
 COPY . .
 
-
 RUN ["npm", "install"]
 
 ENTRYPOINT ["node","npm-publish.js"]

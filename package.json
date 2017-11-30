@@ -1,8 +1,8 @@
 {
   "name": "publish-for-npm",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Let the CI do the `npm publish` step after the build passes",
-  "main": "index.js",
+  "main": "npm-publish.js",
   "bin": {
     "npm-publish": "npm-publish.js"
   },
@@ -11,51 +11,16 @@
     "src"
   ],
   "scripts": {
-    "test": "npm run lint",
-    "commit": "simple-commit-message",
-    "npm-publish": "node npm-publish.js",
-    "ban": "node --harmony node_modules/.bin/ban",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
-    "run": "./run.sh",
     "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts || true"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codefresh-io/npm-publish.git"
   },
-  "keywords": [
-    "release",
-    "to",
-    "npm",
-    "utility",
-    "build",
-    "automatic"
-  ],
   "license": "MIT",
   "homepage": "https://github.com/codefresh-io/npm-publish#readme",
-  "devDependencies": {
-    "ban-sensitive-files": "1.8.3",
-    "pre-git": "3.10.0",
-    "simple-commit-message": "2.1.1",
-    "standard": "8.0.0-beta.3"
-  },
   "dependencies": {
-    "available-versions": "0.10.0",
-    "changed-log": "0.11.0",
-    "npm-utils": "1.7.1"
-  },
-  "config": {
-    "pre-git": {
-      "commit-msg": [],
-      "pre-commit": [
-        "npm run ban",
-        "npm test"
-      ],
-      "pre-push": [
-        "npm run size"
-      ],
-      "post-commit": [],
-      "post-merge": []
-    }
+    "npm-utils": "1.7.1",
+    "lodash": "^4.17.4"
   }
 }
