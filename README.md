@@ -16,9 +16,8 @@ steps:
 
      deploy_to_npm:  
       title: Publishing To Npm 
-      image: codefresh/release-to-npm
+      image: codefresh/npm-publish
       commands:
-      - NPM_TOKEN=${{NPM_TOKEN}} npm run release-to-npm 
   ...
 
 ```
@@ -26,10 +25,11 @@ steps:
 ## Environment Variables
 
 - **required** `NPM_TOKEN` - token of npm account
+- **required** `DIR` - relative path to the directory which we want to publish . if no relative path inserted the default is the current directory.
 
 ## How to use
 
-- Add as a dependency to your project `npm install --save-dev release-to-npm`
+- Add as a dependency to your project `npm install --save-dev publish-for-npm`
 
 - Login into your project's NPM registry
 
@@ -51,7 +51,7 @@ Create a script command to run the release-to-npm, in your `package.json`
 ```json
 {
     "scripts": {
-        "release-to-npm": "release-to-npm"
+        "npm-publish": "npm-publish"
     }
 }
 ```
