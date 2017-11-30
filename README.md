@@ -45,7 +45,7 @@ see how to extracting the NPM_TOKEN https://docs.npmjs.com/private-modules/ci-se
 
 - Add script command
 
-Create a script command to run the release-to-npm, in your `package.json`
+Create a script command to run the npm-publish, in your `package.json`
 
 ```json
 {
