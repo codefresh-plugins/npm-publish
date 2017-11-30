@@ -25,7 +25,6 @@ steps:
 ## Environment Variables
 
 - **required** `NPM_TOKEN` - token of npm account
-- **required** `DIR` - relative path to the directory which we want to publish . if no relative path inserted the default is the current directory.
 
 ## How to use
 
