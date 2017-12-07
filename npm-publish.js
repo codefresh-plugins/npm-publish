@@ -6,20 +6,20 @@ const yargs = require('yargs');
 
 const argv = yargs
     .command('$0', 'relative path for the directory', () => {}, (argv) => {
-        try {
             dir = argv._[0];
             if(_.isUndefined(dir)){
                 dir = '.';
             }
-            process.chdir(dir);
+            try {
+                process.chdir(dir)
+            }
+            catch (err) {
+                onError("Publish to npm failed - Invalid path directory")
+            }
             console.log('Current directory: ' + process.cwd());
             npm.setAuthToken()
-                .then(npm.publish().catch(onError))
+                .then(npm.publish())
                 .catch(onError);
-        }
-        catch (err) {
-            onError('invalid directory')
-        }
     })
     .argv;
 
