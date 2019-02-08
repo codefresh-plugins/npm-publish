@@ -11,7 +11,8 @@
     "src"
   ],
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts || true"
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts || true",
+    "ci-publish": "ci-publish"
   },
   "repository": {
     "type": "git",
