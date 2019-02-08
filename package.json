@@ -1,6 +1,6 @@
 {
   "name": "publish-for-npm",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Let the CI do the `npm publish` step after the build passes",
   "main": "npm-publish.js",
   "bin": {
