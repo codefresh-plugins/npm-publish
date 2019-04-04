@@ -1,11 +1,12 @@
 title: Publish on NPM
 image: codefresh/npm-publish:latest
 description: Publishes a nodejs package to NPM registry
-category:
+categories:
   - Featured
   - Deployment
-source: 'https://github.com/codefresh-contrib/npm-publish'
-logo: 'https://authy.com/wp-content/uploads/npm-logo.png'
+sources:
+  - 'https://github.com/codefresh-contrib/npm-publish'
+icon: 'https://authy.com/wp-content/uploads/npm-logo.png'
 maintainers:
   - name: Jakob Stuart
 envs:
