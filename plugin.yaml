@@ -1,4 +1,5 @@
 title: Publish on NPM
+version: 0.1
 image: codefresh/npm-publish:latest
 description: Publishes a nodejs package to NPM registry
 categories:
