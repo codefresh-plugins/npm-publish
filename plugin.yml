@@ -5,7 +5,6 @@ tag: "0.1"
 version: "0.1"
 description: Publishes a nodejs package to NPM registry
 categories:
-- Featured
 - Deployment
 sources:
 - https://github.com/codefresh-contrib/npm-publish
